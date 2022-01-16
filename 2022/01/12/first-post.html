@@ -1,3 +1,12 @@
-<h1 id="hello-world">Hello world</h1>
-
-<p>This is my first post.</p>
+<h1 id="where-i-think-deep-learning-could-be-useful-for-producing-guitar-tablature">Where I think deep learning could be useful for producing guitar tablature</h1>
+<p>Imagine a model that could take a song and convert that to guitar tablature. Once this capability was created, another model may then even be able to convert this to musical notation!
+The data for the model would need to be in a format suitable for a deep learning model. A video or song first needs to be converted to an audio format, such as .mp3. As deep-learning models excel in image classification, this audio file could then be represented as an image, such as a spectrogram.
+To start, perhaps limit the model to work with guitar-centric songs and videos, of which there are plenty of on YouTube, such as guitar covers, backing tracks and representations of songs.
+These guitar-only songs could then be matched with tablature already available on the internet. For example, a popular database of guitar tablature is ultimate-guitar.com. Data for songs could either be labelled manually (perhaps to start with), or even (eventually) be labelled automatically by matching the song name (contained within the file name) with the highest rated tablature from a search on ultimate-guitar.com.
+The model could then be trained on these songs, labelled with their correct tablature. Use the guidance in Chapter 2 to achieve this.
+Then the user could deploy it following the recommended process.</p>
+<ol>
+  <li>First, use a manual process. So find a guitar-only piece that has high-rated tablature available for it. Then compare this to the results of the model (maybe even play both on the guitar and compare!).</li>
+  <li>Then, deploy it to a limited number of users for a trial period. Gain feedback from these users and use this information to re-train the model (they may find that the model performs better with say acoustic guitar oriented songs as compared to heavily distorted elecric-guitar based songs).</li>
+  <li>Then, gradually increase the scope of the rollout. Release an alpha, then beta version, collecting user feedback and improving for both. For betas and the first (and future) production releases, implement a reporting system that collects feedback from the users. i.e. are the users satisfied with the results that the model outputs? The main thing that can go wrong with the model is producing incorrect tablature. So in the reporting system, contain metrics that compare the model output with any tablature that is available online (if there is any).</li>
+</ol>
